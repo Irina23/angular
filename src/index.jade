@@ -1,13 +1,24 @@
 doctype html
 html(lang="ru", ng-app="phonecatApp")
     head
-        script(src="bower_components/jquery/dist/jquery.js")
+        //script(src="bower_components/jquery/dist/jquery.js")
         script(src="bower_components/angular/angular.min.js")
+        script(src="js/until.js")
 
-
-    body
+    body(ng-controller="PhoneListCtrl")
         .page_wrapper
-            p Nothing here {{'yet' + '!'}}
+            select(ng-model="query")
+                option(value="") All
+                option(ng-repeat="filter in filters") {{filter}}
+            select(ng-model="orderProp")
+                option(value="name") Alphabetical
+                option(value="modal") Newest
+
+            ul
+               li(ng-repeat="phone in phones | filter:query | orderBy:orderProp")
+                   span {{phone.name}}
+                   span {{phone.snippet}}
+                   span {{phone.modal}}
 
 
 
