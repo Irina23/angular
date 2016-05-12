@@ -4,7 +4,6 @@ html(lang="ru", ng-app="phonecatApp")
         //script(src="bower_components/jquery/dist/jquery.js")
         script(src="bower_components/angular/angular.min.js")
         script(src="js/until.js")
-
     body(ng-controller="PhoneListCtrl")
         .page_wrapper
             select(ng-model="query")
@@ -13,12 +12,11 @@ html(lang="ru", ng-app="phonecatApp")
             select(ng-model="orderProp")
                 option(value="name") Alphabetical
                 option(value="modal") Newest
-
             ul
-               li(ng-repeat="phone in phones | filter:query | orderBy:orderProp")
-                   span {{phone.name}}
-                   span {{phone.snippet}}
-                   span {{phone.modal}}
+                li(ng-repeat="phone in phones | filter:query | orderBy:orderProp")
+                    span {{phone.name}}
+                    span {{phone.snippet}}
+                    span {{phone.modal}}
 
 
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-App="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/todo2.js"></script>
+</head>
+<body ng-controller="todoCtrl">
+    <div>{{size_active}} елементов выбрано з {{size}}</div>
+    <ul>
+        <li ng-repeat="todo in todos">
+            <label class="checkbox">
+                <input type="checkbox" ng-model="todo.done">
+                <span>{{todo.name}}</span>
+
+            </label>
+            <ul class="unstyled">
+                <li ng-repeat="childtodo in todo.childtodos">
+                    <label>
+                        <input type="checkbox" ng-model="childtodo.done">
+                        <span>{{childtodo.name}}</span>
+                    </label>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/todo.js"></script>
+</head>
+<body ng-controller="TodoCtrl">
+
+    <div>{{size_active}} of {{size}} remaining</div>
+    <div>
+        <input type="text" ng-model="todoInput" size="50" placeholder="Add New">
+        <input type="submit" value="Add New" ng-click="todoAdd()">
+    </div>
+    <ul class="unstyled">
+        <li ng-repeat="todo in todos" ng-click="countAll()">
+            <label class="checkbox">
+                <input type="checkbox" ng-model="todo.done">
+                <span class="done-{{todo.done}}">{{todo.name}}</span>
+                <div>
+                    <input type="text" ng-model="todoInputParent" size="50" placeholder="Add">
+                    <input type="submit" value="Add" ng-click="todoparentAdd()">
+                </div>
+            </label>
+
+            <ul class="unstyled">
+                <li ng-repeat="parenttodo in todo.parenttodos">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="parenttodo.done">
+                        <span class="done-{{parenttodo.done}}">{{parenttodo.name}}</span>
+                    </label>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

@@ -6,11 +6,11 @@ phonecatApp.controller('PhoneListCtrl', function ($scope) {
             'snippet': 'Loren Ipsum',
             'modal': '5555'
         },
-        {'name': 'Motorola XOOM™ with Wi-Fi',
+        {'name': 'Motorola XOOMâ„¢ with Wi-Fi',
             'snippet': 'The Next, Next Generation tablet.',
             'modal': '111'
         },
-        {'name': 'MOTOROLA XOOM™',
+        {'name': 'MOTOROLA XOOMâ„¢',
             'snippet': 'The Next, Next Generation tablet.',
             'modal': '333'
         },
@@ -18,11 +18,11 @@ phonecatApp.controller('PhoneListCtrl', function ($scope) {
             'snippet': 'Loren Ipsum',
             'modal': '5555'
         },
-        {'name': 'Motorola XOOM™ with Wi-Fi',
+        {'name': 'Motorola XOOMâ„¢ with Wi-Fi',
             'snippet': 'The Next, Next Generation tablet.',
             'modal': '111'
         },
-        {'name': 'MOTOROLA XOOM™',
+        {'name': 'MOTOROLA XOOMâ„¢',
             'snippet': 'The Next, Next Generation tablet.',
             'modal': '333'
         },
@@ -30,11 +30,11 @@ phonecatApp.controller('PhoneListCtrl', function ($scope) {
             'snippet': 'Loren Ipsum',
             'modal': '5555'
         },
-        {'name': 'Motorola XOOM™ with Wi-Fi',
+        {'name': 'Motorola XOOMâ„¢ with Wi-Fi',
             'snippet': 'The Next, Next Generation tablet.',
             'modal': '111'
         },
-        {'name': 'MOTOROLA XOOM™',
+        {'name': 'MOTOROLA XOOMâ„¢',
             'snippet': 'The Next, Next Generation tablet.',
             'modal': '333'
         }
