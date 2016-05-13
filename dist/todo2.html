@@ -9,7 +9,7 @@
 <body ng-controller="todoCtrl">
     <div>{{size_active}} елементов выбрано з {{size}}</div>
     <div>
-        <input type="text" ng-model="todoInput" size="50" placeholder="Add New">
+        <input type="text" ng-model="todoInput" size="50" placeholder="Add New" ng-enter="todoAdd()">
         <input type="submit" value="Add New" ng-click="todoAdd()">
     </div>
     <ul>
@@ -20,7 +20,7 @@
 
             </label>
             <div>
-                <input type="text" ng-model="todoInputParent" size="50" placeholder="Add">
+
                 <input type="submit" value="Add" ng-click="todoparentAdd()">
             </div>
             <ul class="unstyled">
