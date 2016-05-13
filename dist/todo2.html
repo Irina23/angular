@@ -8,13 +8,21 @@
 </head>
 <body ng-controller="todoCtrl">
     <div>{{size_active}} елементов выбрано з {{size}}</div>
+    <div>
+        <input type="text" ng-model="todoInput" size="50" placeholder="Add New">
+        <input type="submit" value="Add New" ng-click="todoAdd()">
+    </div>
     <ul>
-        <li ng-repeat="todo in todos">
+        <li ng-repeat="todo in todos" ng-click="countAll()">
             <label class="checkbox">
                 <input type="checkbox" ng-model="todo.done">
                 <span>{{todo.name}}</span>
 
             </label>
+            <div>
+                <input type="text" ng-model="todoInputParent" size="50" placeholder="Add">
+                <input type="submit" value="Add" ng-click="todoparentAdd()">
+            </div>
             <ul class="unstyled">
                 <li ng-repeat="childtodo in todo.childtodos">
                     <label>
